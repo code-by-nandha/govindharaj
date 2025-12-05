@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Karagattam Team</title>
+
+<style>
+:root{
+  --primary:#012a56;
+  --yellow:#ffeb3b;
+  --dark:#222;
+  --shadow:rgba(0,0,0,0.15);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins, sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#fff,#fff8e1,#ffecb3);
+  animation:move 10s infinite alternate ease-in-out;
+}
+
+@keyframes move{
+  0%{background-position:0 0;}
+  100%{background-position:100% 100%;}
+}
+
+/* Header */
+header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 60px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:1000;
+  box-shadow:0 2px 10px var(--shadow);
+}
+
+.logo{font-size:28px;font-weight:700;color:var(--primary);}
+nav a{text-decoration:none;color:var(--dark);font-weight:600;margin-left:18px;}
+nav a:hover{color:var(--primary);}
+
+/* Floating Home Button */
+.back-btn{
+  position:fixed;
+  bottom:600px;      /* moved to bottom */
+  left:20px;        /* same left side */
+  z-index:2000;
+  padding:12px 28px;
+  background:black;
+  color:yellow;
+  font-weight:700;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:18px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  transition:.3s;
+}
+.back-btn:hover{transform:translateX(5px);background:yellow;color:black;}
+
+/* Gallery Section */
+.gallery-section{
+  text-align:center;padding:80px 10%;
+}
+
+.gallery-section h1{
+  font-size:38px;color:var(--primary);margin-bottom:12px;
+}
+.gallery-section p{color:#444;margin-bottom:40px;}
+
+.gallery-container{
+  display:grid;gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+}
+.gallery-container img{
+  width:100%;border-radius:18px;object-fit:cover;height:260px;
+  box-shadow:0 6px 20px var(--shadow);
+  transition:.4s;
+}
+.gallery-container img:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 26px rgba(255,215,0,0.4);
+}
+</style>
+
+</head>
+<body>
+
+<a href="main.html" class="back-btn">← Home</a>
+
+<header>
+  <div class="logo">Govindraj</div>
+  <nav>
+    <a href="main.html">Home</a>
+  </nav>
+</header>
+
+<section class="gallery-section">
+  <h1>Full Gallery</h1>
+  <p>Folk Dance • Karagattam • Cultural Moments</p>
+
+  <div class="gallery-container">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+    <img src="WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg">
+  </div>
+</section>
+
+</body>
+</html>

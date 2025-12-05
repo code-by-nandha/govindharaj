@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karagattam Folk Dance Team</title>
+  <link href="E:\rough\govindraj\stylesheet.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Govindraj</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="fade-in"><strong>Kalaimaamani D.GovindaRaj<span style="font-size: large;">M.A,M.Phil.</span></h1>
+      <p class="fade-in delay">Experience the vibrant <strong>Karagattam</strong> — a perfect blend of balance, rhythm, and devotion. Our performances bring ancient folk art to the modern stage.</p>
+      <a href="#contact" class="hero-btn fade-in delay2">Book Performance</a>
+    </div>
+    <div class="hero-image fade-in delay3">
+      <img src="E:\rough\govindraj\WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg" alt="Karagattam Performance">
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Our Karagattam Team</h2>
+        <p>We are a passionate <b>Karagattam folk dance team</b> preserving the vibrant culture of Tamil Nadu through traditional movements, rhythm, and artistry. Our performers have showcased their talent across cultural festivals, television shows, and national stages.</p>
+        <p>Every step, spin, and smile we perform comes from our deep love for tradition — blending heritage with a modern touch to keep Karagattam alive for future generations.</p>
+        <a href="#contact" class="btn">Book a Performance</a>
+      </div>
+      <div class="about-image">
+        <img src="E:\rough\govindraj\WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg" alt="Karagattam Dance Team">
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Our Performances</h2>
+    <div class="video-gallery">
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/E5X5LVaIC8Y" allowfullscreen></iframe><h4>Temple Festival 2024</h4></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/E5X5LVaIC8Y" allowfullscreen></iframe><h4>National Dance Competition</h4></div>
+      <div class="video-card"><iframe src="https://www.youtube.com/embed/E5X5LVaIC8Y" allowfullscreen></iframe><h4>Cultural Exchange Tour</h4></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+  <h2>Performance Gallery</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="E:\rough\govindraj\WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg" alt="Karagattam Performance 1"></div>
+    <div class="gallery-item"><img src="E:\rough\govindraj\WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg" alt="Karagattam Performance 2"></div>
+    <div class="gallery-item"><img src="E:\rough\govindraj\WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg" alt="Karagattam Performance 3"></div>
+    <div class="gallery-item"><img src="E:\rough\govindraj\WhatsApp Image 2025-10-14 at 23.12.22_de05e23a.jpg" alt="Karagattam Performance 4"></div>
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+    <a id="seeMoreBtn" href="gallery.html" class="btn" style="padding:10px 25px; background:rgb(254, 229, 0); color:rgb(10, 1, 54); border-radius:8px; font-weight:600; text-decoration:none;">
+  See More →
+</a>
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>Book Our Performance</h2>
+    <p>Want to invite <strong>Karagattam KalaSamithi</strong> for your next cultural or temple event? Fill in your details below, and we’ll get in touch — or chat instantly on WhatsApp.</p>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="event" placeholder="Event Type" required>
+      <input type="date" id="date" required>
+      <textarea id="message" rows="4" placeholder="Additional Message"></textarea>
+      <button type="button" id="bookBtn">📅 Send Booking via WhatsApp</button>
+    </form>
+  </section>
+
+  <footer>
+  © <span id="year"></span> Karagattam KalaSamithi | All Rights Reserved
+
+  <div class="social-links">
+    <a href="www.youtube.com/@govindarajd7893" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
+</footer>
+
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // WhatsApp Booking Connection
+    document.getElementById('bookBtn').addEventListener('click', function() {
+      const name = document.getElementById('name').value.trim();
+      const event = document.getElementById('event').value.trim();
+      const date = document.getElementById('date').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !event || !date) {
+        alert('Please fill all required fields!');
+        return;
+      }
+
+      const phoneNumber = "918760130152"; // ✅ Your working WhatsApp number (no + or spaces)
+      const text = `Hello Maurai Govindraj I would like to book a performance.%0A%0A👤 Name: ${name}%0A🎭 Event: ${event}%0A📅 Date: ${date}%0A💬 Message: ${message || 'N/A'}`;
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
+      window.open(whatsappURL, '_blank');
+    });
+  </script>
+  <script>
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+
+  if (seeMoreBtn) {
+    seeMoreBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.add("page-transition");
+      setTimeout(() => {
+        window.location.href = "gallery.html";
+      }, 600); // match transition time
+    });
+  }
+</script>
+
+
+</body>
+</html>
